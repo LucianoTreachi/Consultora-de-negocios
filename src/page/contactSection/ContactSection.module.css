@@ -16,9 +16,9 @@
 }
 
 .row {
-  margin-top: 50px;
+  margin-top: 5rem;
   display: flex;
-  gap: 10vw;
+  gap: 10%;
   justify-content: space-between;
 }
 
@@ -98,7 +98,7 @@ textarea.textField {
   .row {
     flex-direction: column-reverse;
     grid-template-columns: 1fr;
-    gap: 5vh;
+    gap: 5rem;
   }
 
   .col1 {

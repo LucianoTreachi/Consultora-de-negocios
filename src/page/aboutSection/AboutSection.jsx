@@ -41,8 +41,8 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
+        <h2 className={styles.intermediateTitle}>Confían en Nosotros</h2>
         <div className={styles.row3}>
-          <h2>Confían en Nosotros</h2>
           <div className={styles.box1}>
             <span>
               <img src={iconLamp} alt="Icono de lámpara" />
