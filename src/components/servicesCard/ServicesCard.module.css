@@ -1,0 +1,74 @@
+.card {
+  border-radius: 12px;
+  margin: 0 auto;
+  background: #000;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 7.5px;
+  background: var(--color-3);
+  border: 2px solid #000;
+  border-radius: 12px;
+  z-index: -1;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cardText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  color: #fff;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  opacity: 0.85;
+  width: 80%;
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.cardArrow {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.cardArrow img {
+  width: 18px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.card:hover::before {
+  transform: translate(5px, -5px);
+}
+
+.card:hover .cardArrow img {
+  transform: translate(5px, -5px);
+}

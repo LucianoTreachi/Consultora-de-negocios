@@ -1,0 +1,133 @@
+.section {
+  padding: 4rem 4rem 8rem;
+  background-color: var(--background-1);
+  background: url('../../assets/arrowHomeBackground.png') no-repeat;
+  background-size: 80%;
+  background-position: -100% top;
+  animation: var(--animation-fade-in-translate);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.mainTitle {
+  font-family: var(--title-font);
+  font-size: 6.8rem;
+  line-height: 1.2em;
+  max-width: 600px;
+}
+
+.mainTitle>span {
+  position: relative;
+}
+
+.pattern {
+  position: absolute;
+  bottom: 10px;
+  right: -55px;
+  display: inline-block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.paragraph {
+  font-size: 2rem;
+  margin: 2.5rem 0 4rem;
+  max-width: 450px;
+  line-height: 1.5em;
+}
+
+.containerButtons {
+  display: flex;
+  gap: 3rem;
+}
+
+.secondaryButton {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: none;
+  border: none;
+}
+
+.secondaryButton img {
+  pointer-events: none;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: -5px 5px 20px 0px rgba(65, 65, 65, 0.20);
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding-top: 8rem;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  .image {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    padding: 8rem 0 0;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .section {
+    padding: 0 2rem 8rem;
+    background: none;
+  }
+
+  .container {
+    gap: 4rem;
+  }
+
+  .mainTitle {
+    font-size: 4rem;
+    max-width: 400px;
+  }
+
+  .pattern {
+    bottom: 5px;
+    right: -38px;
+    width: 60px;
+  }
+
+  .paragraph {
+    font-size: 1.8rem;
+  }
+
+  .containerButtons {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,246 @@
+.section {
+  padding: 8rem 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: var(--black);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ROW 1 */
+
+.row1 {
+  background: url('../../assets/aboutShape1.png') no-repeat var(--color-5);
+  background-size: contain;
+  color: var(--black);
+  padding: 5rem;
+  border-radius: 1.5rem;
+}
+
+.row1 h2 {
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* ROW 2 */
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.row2 .col1 {
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.row2 .col1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.row2 .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row2 .col2 .box1 {
+  background: url('../../assets/aboutShape2.png') no-repeat #fff;
+  background-size: contain;
+  background-position: right center;
+  border-radius: 2rem;
+  padding: 12rem 2rem;
+}
+
+.row2 .col2 .box1 p {
+  color: var(--black);
+  font-size: 2.2rem;
+}
+
+.row2 .col2 .box2 {
+  background: url('../../assets/aboutShape3.png') no-repeat #001C34;
+  background-size: contain;
+  background-position: right center;
+  border-radius: 2rem;
+  padding: 12rem 2rem;
+}
+
+.row2 .col2 .box2 p {
+  color: var(--white);
+  font-size: 2.2rem;
+}
+
+.row2 .col2 .box2 p strong {
+  color: var(--color-5);
+}
+
+/* ROW 3 */
+
+.row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.row3 h2 {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 3;
+  font-size: 6rem;
+  width: 80vw;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 5px 5px 0px #E4951D;
+  -webkit-text-stroke: var(--black);
+  -webkit-text-stroke-width: 2px;
+  letter-spacing: 1px;
+}
+
+.row3 .box1,
+.row3 .box2,
+.row3 .box3 {
+  padding: 6rem 2rem;
+  border-radius: 2rem;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  background: #090909;
+  position: relative;
+  overflow: hidden;
+}
+
+.row3 .box1::before,
+.row3 .box2::before,
+.row3 .box3::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--color-5);
+  filter: blur(70px);
+}
+
+.row3 span {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row3 h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  z-index: 2;
+  letter-spacing: .5px;
+  color: var(--white);
+  text-align: center;
+}
+
+@media screen and (max-width: 912px) {
+  .row1 {
+    padding: 5rem 2rem;
+  }
+
+  .row2 {
+    grid-template-columns: 1fr;
+  }
+
+  .row2 .col2 .box1 {
+    padding: 4rem 2rem;
+  }
+
+  .row2 .col2 .box2 {
+    padding: 4rem 2rem;
+  }
+
+  .row3 {
+    grid-template-columns: 1fr;
+  }
+
+  .row3 h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+
+  .container {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .row1 {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .row1 h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .row2 .col2 .box1 p {
+    font-size: 1.8rem;
+  }
+
+  .row2 .col2 .box2 p {
+    font-size: 1.8rem;
+  }
+
+  .row3 .box1,
+  .row3 .box2,
+  .row3 .box3 {
+    justify-items: initial;
+  }
+
+  .row3 h2 {
+    position: relative;
+    font-size: 3rem;
+    text-align: left;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    text-shadow: none;
+    color: initial;
+    -webkit-text-stroke: initial;
+    -webkit-text-stroke-width: initial;
+    letter-spacing: initial;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .row3 h3 {
+    font-size: 2.6rem;
+    text-align: left;
+  }
+}

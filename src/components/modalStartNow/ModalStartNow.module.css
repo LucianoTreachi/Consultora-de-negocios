@@ -1,0 +1,92 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: var(--animation-fade-in);
+}
+
+.modalBox {
+  background-color: var(--white);
+  padding: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 500px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  animation: var(--animation-translate);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: right;
+}
+
+.modalContent {
+  margin-top: 2rem;
+}
+
+.modalTitle {
+  font-size: 2.6rem;
+}
+
+.closeIconModal {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transform: translateY(-1rem);
+}
+
+.modalParagrapgh {
+  margin: 2rem 0;
+}
+
+.button {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: var(--button-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.button:hover {
+  opacity: .85;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 574px) {
+  .modalBox {
+    padding: 4rem 2rem;
+  }
+
+  .closeIconModal {
+    width: 40px;
+    height: 40px;
+  }
+
+  .button {
+    font-size: 1.7rem;
+  }
+}

@@ -1,0 +1,282 @@
+.section {
+  padding: 8rem 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin-top: 10rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5px;
+  background: #FFC272;
+  width: max-content;
+  margin-inline: auto;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.card {
+  width: 100%;
+  max-width: 800px;
+  padding: 4rem 3rem;
+  border-radius: 15px;
+  background: #ffddab;
+  display: none;
+  gap: 5rem;
+}
+
+.card.active {
+  display: flex;
+  animation: var(--animation-fade-in);
+  z-index: 5;
+}
+
+
+/* Card Customer */
+.cardCustomer {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+  padding-top: 14rem;
+}
+
+.boxImage {
+  width: 180;
+  height: 180px;
+  position: absolute;
+  top: -80px;
+}
+
+.boxImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.boxImage::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  background: var(--color-3);
+  border: 2px solid #000;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.cardTitle {
+  font-size: calc(1rem + 1vw);
+  font-weight: 600;
+  color: var(--black);
+}
+
+.cardSubtitle {
+  font-size: 1.4rem;
+  color: var(--color-4);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.cardTitle,
+.cardSubtitle {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ratingStars {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ratingStars img {
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* Card Review */
+.cardReview {
+  position: relative;
+  width: 65%;
+}
+
+.cardParagraph {
+  font-size: 2rem;
+}
+
+.testimonialQuoteImage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: .2;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* More testimonials */
+.moreTestimonials {
+  display: flex;
+}
+
+.moreTestimonials span {
+  width: 50px;
+  height: 100%;
+  background: #FFC272;
+  border-radius: 0 15px 15px 0;
+  margin-left: -15px;
+  z-index: 3;
+}
+
+.moreTestimonials span:nth-child(2) {
+  background: #FFD7A3;
+  z-index: 2;
+}
+
+.moreTestimonials span:nth-child(3) {
+  background: #FFE8C8;
+  z-index: 1;
+}
+
+/* Slider controls */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.controls button {
+  background: transparent;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.controls button img {
+  transform: scaleY(.9);
+}
+
+.controls button:first-child:hover {
+  transform: translateX(-10px);
+}
+
+.controls button:last-child:hover {
+  transform: translateX(10px);
+}
+
+.carouselCounter {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 900px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .cardCustomer,
+  .cardReview {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cardParagraph {
+    font-size: 1.8rem;
+  }
+
+  .cardReview {
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .controls button {
+    width: 80px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .controls *:first-child {
+    justify-content: start;
+  }
+
+  .controls *:last-child {
+    justify-content: end;
+  }
+}
+
+
+@media screen and (max-width: 574px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+
+  .row {
+    margin-top: 8rem;
+  }
+
+  .card {
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .controls button svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cardParagraph {
+    font-size: 1.6rem;
+  }
+
+  .cardReview {
+    padding-bottom: 2rem;
+    text-align: left;
+  }
+
+  .moreTestimonials {
+    display: none;
+  }
+
+  .cardCustomer {
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  .cardTitle,
+  .cardSubtitle {
+    text-align: left;
+  }
+
+  .ratingStars {
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,132 @@
+.section {
+  padding: 8rem 4rem;
+  background: url('../../assets/contactBackground.png') no-repeat;
+  background-size: 40%;
+  background-position: 70% top;
+}
+
+.section h2,
+.section h3 {
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  margin-top: 50px;
+  display: flex;
+  gap: 10vw;
+  justify-content: space-between;
+}
+
+.col1 {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  opacity: .7;
+  font-weight: 500;
+}
+
+.containerInput {
+  display: flex;
+  max-width: 700px !important;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  border: 1px solid #0000004d;
+  background: #FFF8ED;
+  box-shadow: 0px 4px #00000033;
+}
+
+.textField {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: inherit;
+  line-height: 140%;
+}
+
+.textField::placeholder {
+  opacity: 1;
+  color: #000;
+}
+
+textarea.textField {
+  resize: none;
+  min-height: 200px;
+  transition: var(--transition);
+}
+
+.buttonSubmit {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: 0;
+  border-radius: 1rem;
+  padding: 1.8rem 3.3rem;
+  background: var(--button-background);
+  width: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.buttonSubmit:hover {
+  opacity: .85;
+}
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .row {
+    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
+    gap: 5vh;
+  }
+
+  .col1 {
+    margin-top: 0;
+  }
+
+  .textField {
+    font-weight: 500;
+  }
+
+  .col2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 574px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+
+  .row {
+    margin-top: 4rem;
+  }
+}

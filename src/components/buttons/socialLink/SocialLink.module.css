@@ -1,0 +1,57 @@
+.box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.boxIconSocial {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  background-color: var(--color-2);
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 0px 0px #FF9B00;
+  transition: var(--transition);
+}
+
+.boxIconSocial img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.boxName {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem 0 9rem;
+  border-radius: 50px;
+  background: #ffeed3;
+}
+
+.boxName p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.box:hover .boxIconSocial {
+  box-shadow: none;
+  transform: translateX(6px);
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+  .boxIconSocial {
+    position: static;
+  }
+
+  .boxName {
+    display: none;
+  }
+}
