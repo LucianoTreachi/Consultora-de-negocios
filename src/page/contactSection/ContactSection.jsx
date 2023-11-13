@@ -30,13 +30,11 @@ export default function ContactSection() {
         "kHwvebyDYvxL3tKz0"
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           openModalContactSuccess();
           form.current.reset();
         },
-        (error) => {
-          console.log(error.text);
+        () => {
           openModalContactError();
           form.current.reset();
         }
