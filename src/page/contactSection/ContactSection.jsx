@@ -5,7 +5,7 @@ import TitleSection from "../../components/titleSection/TitleSection";
 import SocialLink from "../../components/buttons/socialLink/SocialLink";
 import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
 import ModalContactSuccess from "../../components/modalContactSuccess/ModalContactSuccess";
-import ModalContactError from "../../components/ModalContactError/ModalContactError";
+import ModalContactError from "../../components/modalContactError/ModalContactError";
 import IconEmail from "../../assets/iconEmail.png";
 import IconFacebook from "../../assets/iconFacebook.png";
 import IconYoutube from "../../assets/iconYoutube.png";
