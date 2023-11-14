@@ -69,8 +69,8 @@ export const dataServices = [
   },
 
   {
-    url: "asesoramientos",
-    title: "Asesoramientos",
+    url: "asesorias-de-negocios",
+    title: "Asesorías de negocios",
     image: service4,
     paragraph: (
       <>
