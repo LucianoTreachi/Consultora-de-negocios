@@ -4,8 +4,9 @@ import SubTitleSection from "../../components/subtitleSection/SubTitleSection";
 import TitleSection from "../../components/titleSection/TitleSection";
 import SocialLink from "../../components/buttons/socialLink/SocialLink";
 import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
-import ModalContactSuccess from "../../components/modalContactSuccess/ModalContactSuccess";
-import ModalContactError from "../../components/modalContactError/ModalContactError";
+import ModalLoader from "../../components/modals/modalLoader/ModalLoader";
+import ModalContactSuccess from "../../components/modals/modalContactSuccess/ModalContactSuccess";
+import ModalContactError from "../../components/modals/modalContactError/ModalContactError";
 import IconEmail from "../../assets/iconEmail.png";
 import IconFacebook from "../../assets/iconFacebook.png";
 import IconYoutube from "../../assets/iconYoutube.png";
@@ -14,6 +15,7 @@ import IconTiktok from "../../assets/IconTiktok.png";
 import styles from "./ContactSection.module.css";
 
 export default function ContactSection() {
+  const [showModalLoader, setShowModalLoader] = useState(false);
   const [showModalContactSuccess, setShowModalContactSuccess] = useState(false);
   const [showModalContactError, setShowModalContactError] = useState(false);
 
@@ -22,23 +24,34 @@ export default function ContactSection() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_t91u2hp",
-        "template_xch1h9b",
-        form.current,
-        "kHwvebyDYvxL3tKz0"
-      )
-      .then(
-        () => {
-          openModalContactSuccess();
-          form.current.reset();
-        },
-        () => {
-          openModalContactError();
-          form.current.reset();
-        }
-      );
+    // Display loader when the user submits the form
+    setShowModalLoader(true);
+
+    // Delay the sending of the message
+    setTimeout(() => {
+      // Email Js service
+      emailjs
+        .sendForm(
+          "service_t91u2hp",
+          "template_xch1h9b",
+          form.current,
+          "kHwvebyDYvxL3tKz0"
+        )
+        .then(
+          () => {
+            openModalContactSuccess();
+            form.current.reset();
+          },
+          () => {
+            openModalContactError();
+            form.current.reset();
+          }
+        )
+        .finally(() => {
+          // Hide the loader after the promise is resolved or rejected
+          setShowModalLoader(false);
+        });
+    }, 4000);
   };
 
   const openModalContactSuccess = () => {
@@ -160,10 +173,11 @@ export default function ContactSection() {
           </div>
         </div>
       </section>
+      {/* Show loader when showModalLoader is true */}
+      {showModalLoader && <ModalLoader />}{" "}
       {showModalContactSuccess && (
         <ModalContactSuccess closeModalSuccess={closeModalSuccess} />
       )}
-
       {showModalContactError && (
         <ModalContactError closeModalError={closeModalError} />
       )}

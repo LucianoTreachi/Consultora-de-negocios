@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ModalStartNow from "../../components/modalStartNow/ModalStartNow";
-import ModalVideo from "../../components/modalVideo/ModalVideo";
+import ModalStartNow from "../../components/modals/modalStartNow/ModalStartNow";
+import ModalVideo from "../../components/modals/modalVideo/ModalVideo";
 import PrimaryButton from "../../components/buttons/primaryButton/PrimaryButton";
 import homeImage from "../../assets/homeImage.webp";
 import iconPresentation from "../../assets/playPresentation.png";

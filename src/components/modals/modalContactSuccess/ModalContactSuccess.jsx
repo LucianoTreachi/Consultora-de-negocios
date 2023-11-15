@@ -1,4 +1,4 @@
-import iconSuccess from "../../assets/envio-exitoso.png";
+import iconSuccess from "../../../assets/envio-exitoso.png";
 import styles from "./ModalContactSuccess.module.css";
 
 export default function ModalContactSuccess({ closeModalSuccess }) {
