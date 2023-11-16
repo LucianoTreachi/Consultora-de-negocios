@@ -17,11 +17,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 2.5rem;
   font-weight: 500;
   position: absolute;
-  right: 40px;
-  top: 40px;
+  right: 4rem;
+  top: 4rem;
   z-index: 100;
   background: #ffffff17;
   border-radius: 50%;
@@ -56,4 +56,10 @@
 iframe {
   width: 100%;
   border: 0;
+}
+
+@media screen and (max-width: 574px) {
+  .modalBackdrop button {
+    right: 2rem;
+  }
 }
