@@ -38,7 +38,6 @@
   z-index: 5;
 }
 
-
 /* Card Customer */
 .cardCustomer {
   width: 300px;
@@ -114,7 +113,6 @@
   user-select: none;
   pointer-events: none;
 }
-
 
 /* Card Review */
 .cardReview {

@@ -3,7 +3,6 @@ import { dataServices } from "../../data/dataServices";
 import SubTitleSection from "../../components/subtitleSection/SubTitleSection";
 import TitleSection from "../../components/titleSection/TitleSection";
 import styles from "./ServicesSection.module.css";
-// import serviceArrow from "../../assets/serviceArrow.png";
 import ServicesCard from "../../components/servicesCard/ServicesCard";
 
 export default function ServicesSection() {

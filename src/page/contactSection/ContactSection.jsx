@@ -24,10 +24,10 @@ export default function ContactSection() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Display loader when the user submits the form
+    // Display modal loader when the user submits the form
     setShowModalLoader(true);
 
-    // Delay the sending of the message
+    // Delay the sending of the message with setTimeout
     setTimeout(() => {
       // Email Js service
       emailjs
@@ -173,11 +173,13 @@ export default function ContactSection() {
           </div>
         </div>
       </section>
-      {/* Show loader when showModalLoader is true */}
+      {/* When showModalLoader is true, show ModalLoader  */}
       {showModalLoader && <ModalLoader />}{" "}
+      {/* When showModalContactSuccess is true, show ModalContactSuccess  */}
       {showModalContactSuccess && (
         <ModalContactSuccess closeModalSuccess={closeModalSuccess} />
       )}
+      {/* When showModalContactError is true, show ModalContactError  */}
       {showModalContactError && (
         <ModalContactError closeModalError={closeModalError} />
       )}
