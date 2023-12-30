@@ -8,7 +8,7 @@ export const dataTestimonials = [
   {
     id: "1",
     image: <img src={testimonial1} alt="Imagen de persona" />,
-    title: "Jeronimo Durán",
+    title: "Gerónimo Duran",
     subtitle: "Neumáticos y accesorios",
     rating: 5,
     paragraph:

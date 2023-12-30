@@ -1,6 +1,6 @@
 import styles from "./PrimaryButton.module.css";
 
-const PrimaryButton = ({ content, showArrow, onClick, type}) => {
+const PrimaryButton = ({ content, showArrow, onClick, type }) => {
   return (
     <button className={styles.button} onClick={onClick} type={type}>
       {content}

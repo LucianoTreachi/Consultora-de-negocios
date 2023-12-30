@@ -16,7 +16,8 @@
 
 .containerButton {
   margin-top: 8rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
@@ -28,7 +29,20 @@
   background: var(--button-background);
   box-shadow: 5px 5px 0px 0px #000;
   padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   transition: var(--transition);
+}
+
+.button:hover {
+  box-shadow: none;
+  transform: translate(5px, 5px);
+}
+
+.button svg {
+  width: 24px;
+  height: 24px;
 }
 
 .button:hover {
